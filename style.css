@@ -1,0 +1,73 @@
+/* ===== SUSTAINABLE WASTE MANAGEMENT SYSTEM - STYLES ===== */
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.eco-gradient {
+    background: linear-gradient(135deg, #065f46 0%, #10b981 100%);
+}
+
+.eco-glass {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+}
+
+.leaf-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0c1.657 0 3 1.343 3 3v24h24c1.657 0 3 1.343 3 3s-1.343 3-3 3H33v24c0 1.657-1.343 3-3 3s-3-1.343-3-3V33H3c-1.657 0-3-1.343-3-3s1.343-3 3-3h24V3c0-1.657 1.343-3 3-3z' fill='%2310b981' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+[v-cloak] {
+    display: none !important;
+}
+
+/* ===== ANIMATIONS ===== */
+.animate-fadeIn {
+    animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== VUE TRANSITIONS ===== */
+.notification-enter-active,
+.notification-leave-active {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.notification-enter-from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+}
+
+.notification-leave-to {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #cbd5e1;
+}
